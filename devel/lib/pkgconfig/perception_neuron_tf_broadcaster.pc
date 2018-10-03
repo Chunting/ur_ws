@@ -1,0 +1,8 @@
+prefix=/home/gnc428/ur_ws/devel
+
+Name: perception_neuron_tf_broadcaster
+Description: Description of perception_neuron_tf_broadcaster
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/gnc428/ur_ws/devel/lib 
+Requires: 

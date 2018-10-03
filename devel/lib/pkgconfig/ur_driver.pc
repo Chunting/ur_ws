@@ -1,0 +1,8 @@
+prefix=/home/gnc428/ur_ws/devel
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.1.6
+Cflags: -I/home/gnc428/ur_ws/devel/include
+Libs: -L/home/gnc428/ur_ws/devel/lib 
+Requires: dynamic_reconfigure

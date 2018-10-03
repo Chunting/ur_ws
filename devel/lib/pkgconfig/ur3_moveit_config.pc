@@ -1,0 +1,8 @@
+prefix=/home/gnc428/ur_ws/devel
+
+Name: ur3_moveit_config
+Description: Description of ur3_moveit_config
+Version: 1.1.6
+Cflags: 
+Libs: -L/home/gnc428/ur_ws/devel/lib 
+Requires: 

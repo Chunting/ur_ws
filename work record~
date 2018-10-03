@@ -1,0 +1,37 @@
+1 roslaunch ur_gazebo ur5.launch limited:=true
+  roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch sim:=true limited:=true
+  roslaunch ur5_moveit_config moveit_rviz.launch config:=true
+
+2 #to control ur5 with keyboad
+  chmod 777 /dev/input/event3
+  rosrun lesson_move_group lesson_move_group5
+  rosrun lesson_move_group key_press_talker
+
+3 gazebo frame x:front y:right z:up RPY:fixed frame, XYZ
+
+4 roslaunch ur_modern_driver ur5_bringup.launch robot_ip:=
+  roslaunch ur_modern_driver ur5_ros_control.launch robot_ip:=
+  roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch
+  roslaunch ur5_moveit_config moveit_rviz.launch config:=true
+
+5 rosrun  robotiq_s_model_control SModelTcpNode.py 192.168.1.11
+  rosrun robotiq_s_model_control SModelSimpleController.py
+ rosrun robotiq_s_model_control SModelTcpNode.py 192.168.1.11
+
+6 ./bin/Protonect
+  roslaunch kinect2_bridge kinect2_bridge.launch
+  rosrun kinect2_viewer kinect2_viewer sd cloud
+
+7 rosservice call /controller_manager/switch_controller "start_controllers:
+- ''
+stop_controllers:
+- 'left_vel_based_pos_traj_controller'
+strictness: 1" 
+
+8 rosrun rosserial_server socket_node 
+  rosrun perception_neuron_tf_broadcaster perception_neuron_tf_broadcaster_node 
+
+9 lesson_move_group_12 the cope of lesson_move_group_10 for revising paper
+
+
+

@@ -1,0 +1,8 @@
+prefix=/home/gnc428/ur_ws/devel
+
+Name: lesson_move_group
+Description: Description of lesson_move_group
+Version: 0.0.0
+Cflags: -I/home/gnc428/ur_ws/devel/include
+Libs: -L/home/gnc428/ur_ws/devel/lib 
+Requires: message_runtime std_msgs
